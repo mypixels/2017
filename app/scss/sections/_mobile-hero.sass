@@ -1,9 +1,20 @@
 .mobile-hero
   line-height: 1.6em
+  background:
+    image: url('../img/header_bg.png')
+    position: center top
+    size: cover
+    repeat: no-repeat
+
+  .section-heading, .tagline
+    color: $white
+    margin-bottom: 0
 
   .hero-info
     margin-top: 1em
     line-height: 1.2em
+    font-size: 1.5em
+    color: $white
 
   .buttons
     display: flex
@@ -16,7 +27,7 @@
       margin: 0 auto
 
     .cta-services
-      background-color: $gif-red
+      background-color: darken($gif-red, 15%)
 
       &:hover
         background-color: darken($gif-red, 5%)
