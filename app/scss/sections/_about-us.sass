@@ -1,6 +1,7 @@
 .about-us
   display: block
   position: relative
+  padding-bottom: $section-padding
 
   &::after
     content: ''
@@ -14,5 +15,12 @@
       position: center top
       size: cover
       repeat: no-repeat
-    opacity: 0.2
+      color: darken($white, 20%)
+    opacity: 0.4
     z-index: -1
+
+  .about-heading
+    margin-bottom: 0.7em
+
+  .review-slider
+    background: rgba(255, 255, 255, 0.6)

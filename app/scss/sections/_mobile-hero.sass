@@ -1,5 +1,5 @@
 .mobile-hero
-  line-height: 1.5em
+  line-height: 1.6em
 
   .hero-info
     margin-top: 1em
@@ -12,12 +12,18 @@
     margin-top: $section-padding
 
     .cta-services, .cta-contact
-      width: 47.5%
+      width: 50%
       margin: 0 auto
 
     .cta-services
       background-color: $gif-red
 
+      &:hover
+        background-color: darken($gif-red, 5%)
+
     .cta-contact
       background-color: $font-color
       color: $white
+
+      &:hover
+        background-color: darken($font-color, 5%)

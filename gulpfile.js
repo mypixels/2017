@@ -51,7 +51,8 @@ gulp.task('browserSync', function() {
     notify: {
       styles: {
         backgroundColor: 'rgba(0,0,0,0.3)',
-        top: '150px'
+        bottom: '0',
+        left: '0'
       }
     }
   })
