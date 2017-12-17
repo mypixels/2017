@@ -144,7 +144,7 @@
       <div class="section-heading">
         <h1>Who Are We?</h1>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reprehenderit quasi cupiditate iste assumenda nam veritatis possimus, ducimus dolore, dolorum, ipsam quo? Inventore tempore aliquam at laborum dolorem vero itaque.</p>
+      <p class="about-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla reprehenderit quasi cupiditate iste assumenda nam veritatis possimus, ducimus dolore, dolorum, ipsam quo? Inventore tempore aliquam at laborum dolorem vero itaque.</p>
 
       <div class="reviews">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quibusdam cupiditate quod, iure veniam qui rerum amet alias ut perferendis, recusandae doloremque error molestias praesentium ipsam in ipsa. Veritatis, sed.</p>
@@ -169,6 +169,44 @@
 
     </div>
   </section>
+
+  <!-- CONTACT -->
+  <section class="contact-us">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Drop Us A Line...</h1>
+      </div>
+
+      <form onsubmit="submitForm(); return false;" id="contact-form">
+        <p id="contact-form-return-message"></p>
+        <div class="form-input">
+
+          <div>
+            <input type="text" id="contact-name" required><span class="bar-1"></span>
+            <label>Name</label>
+          </div>
+
+          <div>
+            <input type="text" id="contact-email" required><span class="bar-2"></span>
+            <label>Email</label>
+          </div>
+
+          <div>
+            <textarea name="contact-message" id="contact-message" required></textarea><span class="bar-3"></span>
+            <label>What's up?</label>
+          </div>
+          <input type="submit" id="contact-submit" value="Send"><span id="contact-status"></span>
+
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2400.890395722993!2d-1.1298708840044378!3d53.004355107972565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879c0e76a8ee815%3A0xbeb8ae522b9a5696!2sGet+It+Fixed+Electronics!5e0!3m2!1sen!2suk!4v1513550359271" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
+
 
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
