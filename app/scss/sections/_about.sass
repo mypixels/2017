@@ -1,0 +1,28 @@
+.about-us
+  padding-top: $section-padding
+  background-color: $font-color
+  color: $white
+  text-align: center
+
+  .section-heading
+    text-transform: uppercase
+
+  p
+    &:first-of-type
+      padding-bottom: $section-padding
+
+  .reviews
+    padding: $section-padding 0
+    background-color: $gif-red
+
+  .about-us-grid
+    display: grid
+    grid-template-columns: 1fr
+    padding-top: $section-padding
+
+    div[class^="grid-"]
+      padding: 1em
+      color: lighten($font-color, 40%)
+
+      i
+        color: $white

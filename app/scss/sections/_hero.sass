@@ -1,0 +1,59 @@
+.main-hero
+  margin-top: 49.8px
+  height: 50vh
+  color: $white
+  background:
+    image: url('../img/header_bg.jpg')
+    position: center top
+    size: cover
+    repeat: no-repeat
+
+  @include tablet
+    height: 80vh
+
+  .hero-content
+    // display: flex
+    // height: 50vh
+    // flex-direction: column
+    // justify-content: flex-end
+    // align-items: center
+    // line-height: 1.6em
+
+    display: grid
+    height: 100%
+    grid-template-columns: 1fr
+    grid-template-rows: 25% 50% 25%
+    align-items: center
+    text-align: center
+
+    .section-heading
+      grid-row-start: 2
+      line-height: 1.6em
+
+    @include tablet
+      height: 80vh
+
+  .cta
+    display: flex
+    grid-row-start: 3
+    align-self: flex-end
+    width: 100%
+
+    @include tablet
+      width: 70%
+      margin: 0 auto
+      align-self: flex-start
+
+    .btn
+      text-align: center
+
+      @include tablet
+        padding: 0 1em
+
+    .services-btn
+      background-color: $gif-red
+      padding: 0.4em 0
+
+    .contact-btn
+      background-color: $font-color
+      padding: 0.4em 0
