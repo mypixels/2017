@@ -8,13 +8,30 @@
       align-items: center
 
       a
-        border-left: 1px solid lighten($font-color, 60%)
-        border-bottom: 1px solid lighten($font-color, 60%)
-        padding: 1em 0
+        border: 1px solid lighten($font-color, 60%)
+        padding-top: 1em
         color: lighten($font-color, 40%)
-
-        &:nth-child(1), &:nth-child(4), &:nth-child(7)
-          border-left: 0
 
         i
           color: $font-color
+          transition: color 0.25s ease
+
+        .arrow-down
+          opacity: 0
+          transition: opacity 0.25s ease
+
+        .active
+          color: $gif-red
+          opacity: 1
+
+      .grid-info
+        grid-column: 1/4
+        overflow: hidden
+        line-height: 0em
+        transition: all 0.25s ease
+
+
+      .info-open
+        line-height: 1.6em
+        padding: 0.4em
+        border: 1px solid lighten($font-color, 60%)

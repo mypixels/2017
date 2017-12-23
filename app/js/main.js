@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   // Trigger Mobile Nav
   $('.nav-toggle').click(function() {
-    $('.navbar').toggleClass('is-open');
-    $('.menu-icon').toggleClass('is-open');
+    $('.navbar').toggleClass('nav-open');
+    // $('.nav-toggle > i').toggleClass('is-open');
   })
 
   // Offset Hero From Navbar
@@ -37,4 +37,78 @@ $(document).ready(function() {
     }
     ajax.send(formdata);
   }
-})
+
+  // Services Panels
+  $('.phone-repair').click(function() {
+    $('.tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.phone-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.tablet-repair').click(function() {
+    $('.phone-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.tablet-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.computer-repair').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.computer-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.console-repair').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.console-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.tv-repair').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .console-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .console-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.tv-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.board-repair').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.board-repair-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.security-check').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .virus-removal > i, .data-recovery > i').removeClass('active');
+    $('.security-check-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.virus-removal').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .data-recovery-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .data-recovery > i').removeClass('active');
+    $('.virus-removal-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  $('.data-recovery').click(function() {
+    $('.phone-repair-info, .tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info').removeClass('info-open');
+    $('.phone-repair > i, .tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i').removeClass('active');
+    $('.data-recovery-info').toggleClass('info-open');
+    $('i', this).toggleClass('active');
+  })
+
+  // Reviews Carousel
+  $('.reviews').slick({
+    autoplay: true,
+    arrows: false,
+    dots: true,
+    pauseOnFocus: false,
+    swipeToSlide: true
+  });
+
+});
