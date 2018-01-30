@@ -1,12 +1,15 @@
 .contact-us
-  
+  padding: 0 0.6em
+
+  @include tablet
+    padding: 0
+
   .section-heading
-    padding-top: $section-padding
+    padding: $section-padding 0
 
   #contact-form
     display: flex
     flex-direction: column
-    padding-top: $section-padding
 
     .bar-1, .bar-2, .bar-3
       position: relative

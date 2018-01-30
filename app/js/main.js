@@ -8,8 +8,45 @@ $(document).ready(function() {
 
   // Offset Hero From Navbar
   var headerHeight = $('.main-header').outerHeight();
+  $('.main-hero').css('margin-top', headerHeight);
 
-  $('.mobile-hero').css('margin-top', headerHeight);
+  // Smooth Scrolling
+  // Select all links with hashes
+  $('a[href*="#"]')
+    // Remove links that don't actually link to anything
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+      // On-page links
+      if (
+        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+        &&
+        location.hostname == this.hostname
+      ) {
+        // Figure out element to scroll to
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        // Does a scroll target exist?
+        if (target.length) {
+          // Only prevent default if animation is actually gonna happen
+          event.preventDefault();
+          $('html, body').animate({
+            scrollTop: target.offset().top -headerHeight
+          }, 1000, function() {
+            // Callback after animation
+            // Must change focus!
+            var $target = $(target);
+            $target.focus();
+            if ($target.is(":focus")) { // Checking if the target was focused
+              return false;
+            } else {
+              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+              $target.focus(); // Set focus again
+            };
+          });
+        }
+      }
+    });
 
   // Contact Form
   function _(id) { return document.getElementById(id);}
@@ -39,6 +76,10 @@ $(document).ready(function() {
   }
 
   // Services Panels
+  $('[id*=-repair]').hover(function() {
+    $(this).toggleClass('active');
+  })
+
   $('.phone-repair').click(function() {
     $('.tablet-repair-info, .computer-repair-info, .console-repair-info, .tv-repair-info, .board-repair-info, .security-check-info, .virus-removal-info, .data-recovery-info').removeClass('info-open');
     $('.tablet-repair > i, .computer-repair > i, .console-repair > i, .tv-repair > i, .board-repair > i, .security-check > i, .virus-removal > i, .data-recovery > i').removeClass('active');
@@ -102,8 +143,18 @@ $(document).ready(function() {
     $('i', this).toggleClass('active');
   })
 
+  // Hero Carousel
+  $('#hero-carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    dots: true,
+    pauseOnFocus: false,
+    swipeToSlide: true
+  });
+
   // Reviews Carousel
-  $('.reviews').slick({
+  $('#review-carousel').slick({
     autoplay: true,
     arrows: false,
     dots: true,

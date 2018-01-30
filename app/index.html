@@ -28,12 +28,14 @@
     <div class="container">
 
       <ul class="social-links">
-        <a href="#"><li><i class="fab fa-facebook-f"></i></li></a>
-        <a href="#"><li><i class="fab fa-instagram"></i></li></a>
-        <a href="#"><li><i class="fab fa-google-plus-g"></i></li></a>
+        <a href="https://www.facebook.com/GetItFixedArnold/" target="_blank"><li><i class="fab fa-facebook-f"></i></li></a>
+        <a href="https://www.instagram.com/getitfixed_arnold/" target="_blank"><li><i class="fab fa-instagram"></i></li></a>
+        <!-- <a class="hidden-mobile" href="#"><li><i class="fab fa-google-plus-g"></i></li></a> -->
+        <a class="hidden-mobile" mailto="#"><li><i class="far fa-envelope"></i></li></a>
+        <a tel="#"><li><i class="fas fa-phone"></i></li></a>
       </ul>
 
-      <a class="logo" href="#"><img src="img/logo_red.png" alt="Get It Fixed Phone Repairs"></a>
+      <a class="logo" href="#home"><img src="img/logo_red.png" alt="Get It Fixed Phone Repairs"></a>
 
       <div class="nav-toggle">
         <i class="material-icons">menu</i>
@@ -41,11 +43,11 @@
 
       <nav class="navbar">
         <ul class="main-nav">
-          <a href="#"><li>Link</li></a>
-          <a href="#"><li>Link</li></a>
-          <a href="#"><li>Link</li></a>
-          <a href="#"><li>Link</li></a>
-          <a href="#"><li>Link</li></a>
+          <a href="#home"><li>Home</li></a>
+          <a href="#services"><li>Services</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#contact"><li>Contact</li></a>
+          <a href="#"><li>Terms</li></a>
         </ul>
       </nav>
 
@@ -53,27 +55,33 @@
   </header>
 
   <!-- HERO -->
-  <section class="main-hero">
-    <div class="hero-content">
-      <div class="section-heading">
+  <div class="main-hero" id="home">
+    <div class="hero-carousel" id="hero-carousel">
+      <div class="slide-1">
         <h1>Get It Fixed</h1>
-        <p class="section-tagline">computer repair specialists</p>
+        <p class="slide-tagline">Computer & Phone Repairs</p>
       </div>
-
-      <ul class="cta">
-        <a href="#" class="btn"><li class="services-btn">Services</li></a>
-        <a href="#" class="btn"><li class="contact-btn">Contact</li></a>
-      </ul>
+      <div class="slide-2">
+        <h1>Get It Fixed 2</h1>
+        <p class="slide-tagline">Computer & Phone Repairs</p>
+      </div>
     </div>
-  </section>
+
+    <!-- <div class="container">
+      <div class="hero-btns">
+        <a href="#" class="cta services-cta"><span>Services</span></a>
+        <a href="#" class="cta contact-cta"><span>Contact</span></a>
+      </div>
+    </div> -->
+  </div>
 
   <!-- Services -->
-  <section class="services">
+  <section class="services" id="services">
     <div class="container">
       <div class="services-grid">
 
         <a href="javascript:void(0)">
-          <div class="phone-repair">
+          <div class="phone-repair" id="service-repair">
             <i class="material-icons">phone_iphone</i>
             <p>Phone Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -81,7 +89,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="tablet-repair">
+          <div class="tablet-repair" id="service-repair">
             <i class="material-icons">tablet_mac</i>
             <p>Tablet Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -89,7 +97,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="computer-repair">
+          <div class="computer-repair" id="service-repair">
             <i class="material-icons">laptop_mac</i>
             <p>Computer Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -109,7 +117,7 @@
         </div>
 
         <a href="javascript:void(0)">
-          <div class="console-repair">
+          <div class="console-repair" id="service-repair">
             <i class="material-icons">videogame_asset</i>
             <p>Console Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -117,7 +125,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="tv-repair">
+          <div class="tv-repair" id="service-repair">
             <i class="material-icons">tv</i>
             <p>TV Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -125,7 +133,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="board-repair">
+          <div class="board-repair" id="service-repair">
             <i class="material-icons">memory</i>
             <p>Board Repair</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -145,7 +153,7 @@
         </div>
 
         <a href="javascript:void(0)">
-          <div class="security-check">
+          <div class="security-check" id="service-repair">
             <i class="material-icons">security</i>
             <p>Security Check</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -153,7 +161,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="virus-removal">
+          <div class="virus-removal" id="service-repair">
             <i class="material-icons">bug_report</i>
             <p>Virus Removal</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -161,7 +169,7 @@
         </a>
 
         <a href="javascript:void(0)">
-          <div class="data-recovery">
+          <div class="data-recovery" id="service-repair">
             <i class="material-icons">cloud_download</i>
             <p>Data Recovery</p>
             <i class="material-icons arrow-down">keyboard_arrow_down</i>
@@ -185,7 +193,7 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="about-us">
+  <section class="about-us" id="about">
     <div class="container">
       <div class="section-heading">
         <h1>Who Are We?</h1>
@@ -194,7 +202,7 @@
     </div>
 
       <!-- REVIEW CAROUSEL -->
-      <div class="reviews">
+      <div class="reviews" id="review-carousel">
         <div class="review-info">
           <img src="https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-1/p160x160/22050375_10155036135908660_2265433180313041490_n.jpg?oh=2014cd56fd059b1730e14710211c9d48&oe=5ACD8F1F" alt="">
           <p class="reviewer">Claire Ping-hind <span>- 15 December 2017</span></p>
@@ -257,7 +265,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="contact-us">
+  <section class="contact-us" id="contact">
     <div class="container">
       <div class="section-heading">
         <h1>Drop Us A Line...</h1>
@@ -296,7 +304,6 @@
   <!-- FOOTER -->
 
 
-
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -304,6 +311,11 @@
 
   <!-- Vendor Scripts -->
   <script src="js/slick.min.js"></script>
+
+  <!-- Instagram Feed -->
+  <script src="js/instafeed.js"></script>
+
+  </script>
 
   <!-- My Scripts -->
   <script src="js/main.min.js"></script>

@@ -1,6 +1,6 @@
 // Media Queries
 $tablet-width: 768px
-$desktop-width: 1024px
+$desktop-width: 1200px
 
 @mixin tablet
   @media (min-width: #{$tablet-width})
@@ -28,8 +28,8 @@ html
   height: 100%
 
 body
-  width: 100%
   background-color: $white
+  width: 100%
 
 img
   display: block
@@ -40,4 +40,15 @@ img
   margin: 0 auto
 
   @include tablet
-    width: $tablet_width
+    width: $tablet-width
+    padding: 0 1em
+
+  @include desktop
+    width: $desktop-width
+    padding: 0 1em
+
+.hidden-mobile
+  display: none
+
+  @include tablet
+    display: block

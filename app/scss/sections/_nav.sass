@@ -1,8 +1,8 @@
-.main-header
+header
   position: fixed
   top: 0
-  left: 0
   right: 0
+  left: 0
   z-index: 100
   background-color: $font-color
   padding: 0.4em 0.6em
@@ -16,8 +16,14 @@
       display: flex
       font-size: 1.2em
 
+      a
+        cursor: pointer
+
       li
         padding: 0 0.6em
+
+        @include tablet
+          padding: 0 1em
 
         &:first-of-type
           padding-left: 0
@@ -26,6 +32,10 @@
       display: flex
       justify-content: flex-end
       color: $white
+      cursor: pointer
+
+      @include desktop
+        display: none
 
       i
         font-size: 2em
@@ -36,12 +46,25 @@
       overflow: hidden
       transition: all 0.45s ease
 
+      @include desktop
+        display: flex
+        align-items: center
+        max-height: 2em
+        grid-column: 3
+        justify-content: flex-end
+
       .main-nav
         display: block
         text-align: center
 
+        @include desktop
+          display: flex
+
         li
           padding: 1em 0
+
+          @include desktop
+            padding: 0 1em
 
     .nav-open
       max-height: 20em
