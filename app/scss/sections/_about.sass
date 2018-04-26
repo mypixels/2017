@@ -1,0 +1,60 @@
+.about-us
+  padding: $section-padding 0
+  background-color: $font-color
+  color: $white
+
+  .about-info
+    padding-bottom: $section-padding
+
+  .reviews
+    padding: $section-padding 0
+    background-color: $gif-red
+
+    .review-info
+      display: grid
+      align-items: center
+
+      img
+        border-radius: 90%
+        width: 20%
+        margin-bottom: 0.6em
+
+        @include tablet
+          width: 10%
+
+      .reviewer
+        font-weight: 600
+        span
+          color: darken($white, 20%)
+          font-weight: 400
+
+      .review-rating
+        display: flex
+        flex: 1
+        justify-content: center
+        color: #FFBE0C
+        margin-bottom: 1em
+
+      q
+        font-style: italic
+        padding: 0 1em
+
+        @include tablet
+          max-width: $tablet_width
+          margin: 0 auto
+
+  .about-us-grid
+    display: grid
+    grid-template-columns: 1fr
+    padding-top: $section-padding
+
+    @include tablet
+      grid-template-columns: repeat(3, 1fr)
+      padding-bottom: $section-padding
+
+    div[class^="grid-"]
+      padding: 1em
+      color: lighten($font-color, 40%)
+
+      i
+        color: $white
