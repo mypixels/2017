@@ -29,7 +29,7 @@ Thumbs.db
 
 # Build Systems #
 #################
-/node_mudules/
+node_mudules/
 bower_components/
 .sass-cache
 *.css.map
